@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhila Dande Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* Slate 900 */
+            color: #F8FAFC; /* Slate 50 */
+            font-size: 18px;
+        }
+        .hero-bg {
+            background-image:linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 1)), url('./assest/Background1.jfif');
+            background-size: cover;
+            background-position: center;
+        }
+       
+        .btn-primary {
+            @apply bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105;
+        }
+        .btn-secondary {
+            @apply border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105;
+        }
+        .card {
+            @apply bg-slate-800 rounded-2xl shadow-lg p-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02];
+        }
+        .section-title {
+            @apply text-4xl font-bold mb-4 text-center text-white;
+        }
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 header-bg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Portfolio</a>
+            <div>
+                <a href="#about" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Projects</a>
+                <a href="#work" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Experience</a>
+                <a href="#contact" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg h-screen flex items-center justify-center text-center text-white relative">
+            <div class="z-10 px-6">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">Akhila Dande</h1>
+                <p class="text-xl md:text-2xl font-light mb-8">Full-Stack .NET Developer | Frontend Developer</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="#contact" class="btn-primary">Get In Touch</a>
+                    <a href="#about" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="absolute bottom-10 animate-bounce">
+                <p class="text-gray-400">Scroll Down</p>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-slate-900 fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">About Me</h2>
+                <div class="bg-slate-800 rounded-2xl p-8 md:p-12 shadow-lg">
+                    <p class="text-lg mb-6 leading-relaxed">
+                        I'm a Master's student in Information Systems at Saint Louis University and a pragmatic Full-Stack .NET Developer with 3 years of experience building data-driven web applications and business intelligence solutions. I specialize in C#, ASP.NET, Angular, and Microsoft SQL Server, focusing on clean architecture, scalable solutions, and actionable insights for users. My recent work includes developing Krunch Box, a retail BI platform, responsive e-commerce websites, and data analysis tools.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        I thrive on solving complex problems and continuously seek out new technologies to stay ahead in this ever-evolving field. What drives me is the excitement of turning ideas into impactful solutions. My approach to work is grounded in discipline, commitment, and determination. I value continuous learning and take pride in writing clean, scalable code while collaborating effectively with cross-functional teams.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-slate-900 fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                    <div class="card flex flex-col items-center text-center">
+                        <h3 class="text-xl font-bold mb-2">Programming Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">C#</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <h3 class="text-xl font-bold mb-2">Frameworks & Libraries</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">ASP.NET</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Angular</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">HTML & CSS</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <h3 class="text-xl font-bold mb-2">Databases & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Microsoft SQL Server</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">SQL</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Git</span>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <h3 class="text-xl font-bold mb-2">Concepts & Practices</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Data Visualization</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">API Development</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">ETL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-slate-800 fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Projects</h2>
+                <div class="grid md:grid-cols-2 gap-8 mt-8">
+                    <!-- Krunch Box Project Card -->
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-2">Krunch Box — Retail BI Platform</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">ASP.NET Core</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Angular</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">SQL Server</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">C#</span>
+                        </div>
+                        <p class="text-lg">
+                            Developed a business intelligence platform to aggregate supplier sales and inventory data, providing dashboards, reorder suggestions, and sales forecasting.
+                        </p>
+                    </div>
+                    <!-- E-commerce Website Project Card -->
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-2">Responsive E-commerce Website</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Angular</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">ASP.NET</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">SQL</span>
+                        </div>
+                        <p class="text-lg">
+                            Built a responsive e-commerce frontend with product listings, cart flows, and admin-managed product pages. Backend APIs handle product CRUD, order management, and authentication.
+                        </p>
+                    </div>
+                    <!-- Student DBMS Project Card -->
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-2">Student DBMS Project (3NF)</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">MS SQL Server</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">ER Diagram</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">DDL/DML</span>
+                        </div>
+                        <p class="text-lg">
+                            Designed a normalized database for students, classes, and enrollments in 3NF, with stored procedures, views, and sample data scripts.
+                        </p>
+                    </div>
+                    <!-- Spotify Data Analysis Project Card -->
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-2">Employee Management System</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">SQL Server</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">T-SQL</span>
+                            <span class="bg-cyan-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">SSMS</span>
+                        </div>
+                        <p class="text-lg">
+                          Developed an Employee Management Database in SQL Server with normalized tables, constraints, and stored procedures for CRUD operations. Automated attendance and salary reports, improving HR efficiency and reducing manual errors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="work" class="py-20 bg-slate-900 fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="space-y-12 mt-8">
+                    <div class="card">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white">Information Technology Senior Associate - NTT DATA</h3>
+                            <p class="text-gray-400 font-light text-sm text-right">Hyderabad, India | Sep 2021 - Dec 2023</p>
+                        </div>
+                        <p class="text-lg mt-2">
+                            Developed Krunch Box, a business intelligence platform for retail suppliers, by building backend services using ASP.NET and C# integrated with SQL Server to manage large volumes of supplier, product, and sales data. Built RESTful APIs to ensure seamless communication between the backend and Angular-based frontend dashboards, providing interactive visualizations and actionable insights. Designed and managed data aggregation pipelines to transform raw sales and inventory data into meaningful business intelligence, and created custom reports and analytics dashboards to monitor performance metrics, track inventory, and support informed decision-making. Ensured data accuracy and consistency through optimized database design, indexing, and queries, while collaborating with cross-functional teams to deliver a polished and user-friendly product. As a result, retail suppliers were able to make data-driven decisions, optimize inventory, increase sales efficiency, and reduce operational inefficiencies.
+
+
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-800 fade-in">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-300">
+                    Feel free to reach out for collaborations, questions, or job opportunities.
+                </p>
+                <!-- <a href="mailto:akhiladande60@gmail.com" class="btn-primary">Send me an Email</a>
+                <button onclick="location.href='mailto:akhiladande60@gmail.com'" class="btn-primary">
+                    Send me an Email
+                </button> -->
+                <!-- Include Font Awesome in your <head> if not already -->
+                <!-- Include Font Awesome in your <head> if not already -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+                
+                <div class="flex justify-center gap-4 mt-4">
+                    <!-- Email Button -->
+                    <button onclick="location.href='mailto:akhiladande60@gmail.com'"
+                        class="btn-primary flex items-center gap-2 px-4 py-2">
+                        <i class="fa-solid fa-envelope"></i>
+                        Email Me
+                    </button>
+                
+                    <!-- LinkedIn Button -->
+                    <button onclick="window.open('https://www.linkedin.com/in/akhila-dande-b63a5a1ba', '_blank')"
+                        class="btn-primary flex items-center gap-2 px-4 py-2">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </button>
+                </div>
+                
+                </div>
+                </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 py-6 text-center text-gray-400">
+        <p>&copy; 2025 Professional Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
